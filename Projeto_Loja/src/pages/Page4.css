@@ -1,0 +1,19 @@
+.tituloECard h1 {
+    font-family: "Sriracha", cursive;
+    font-size: 3em;
+    align-items: center;
+}
+
+.tituloECard img {
+    width: auto;
+    height: 6vh;
+    padding-left: 2em;
+    border-radius: 100%;
+}
+
+.tituloECard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}

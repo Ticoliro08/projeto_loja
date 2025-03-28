@@ -1,0 +1,10 @@
+#root {
+  /* Formatação do Root */
+  margin: 0;
+  padding: 0;
+
+  /* FlexBox */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,0 +1,148 @@
+.blocoCard {
+    background-color: #F7F4F4;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 75vh;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.blocoCard:hover {
+    box-shadow: 0em 0.4em 1em gainsboro;
+    
+}
+
+.blocoTextos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50vh;
+}
+
+.blocoTextos h2 {
+    padding: 0.5em;
+    text-align: center;
+}
+
+.blocoTextos p {
+    padding-bottom: 1.1em;
+    padding-right: 1.1em;
+    padding-left: 1.1em;
+    text-align: justify;
+}
+
+.blocoCard2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagemVia {
+width: 20vw;
+height: 30vh;
+border-radius: 10px;
+}
+
+.botaoCurtida {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: red;
+    color: white;
+    width: 6vw;
+    padding: 0.5em;
+    border-style: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.explorar {
+    color: rgb(126, 126, 249);
+    padding-left: 1.1em;
+    width: 20vw;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.valor {
+    background-color: #F0ECEC;
+    width: 19.3vw;
+    padding: 0.3vw;
+    border: #969393 solid 1px;
+    border-radius: 10px;
+}
+
+
+
+
+/* --------------------------------------------------------------------- */
+
+/* From Uiverse.io by KSAplay */ 
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: 100ms;
+  }
+  
+  .checkmark {
+    top: 0;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    transition: 100ms;
+    animation: dislike_effect 400ms ease;
+  }
+  
+  .container input:checked ~ .checkmark path {
+    stroke-width: 0;
+  }
+  
+  .container input:checked ~ .checkmark {
+    animation: like_effect 400ms ease;
+  }
+  
+  .container:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes like_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes dislike_effect {
+    0% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  

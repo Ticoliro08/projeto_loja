@@ -1,0 +1,38 @@
+.meio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 2s ease;
+  }
+  
+  #slider {
+    position: relative;
+    width: 70%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
+    border: 4px solid  ;
+  }
+  
+  .sliderBtn {
+   
+    background-color: #0f1215;
+    cursor: pointer;
+    font-size: 24px;
+    color:#ffffffaa;
+    
+
+   
+  }
+  
+ 
