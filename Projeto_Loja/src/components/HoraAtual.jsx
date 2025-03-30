@@ -25,9 +25,7 @@ function TemaDinamico() {
   return (
     <div
       style={{
-        background:  "rgba(51, 51, 51, 0.8)" , // Fundo transparente
         color: escuro ? "#fff" : "#000", 
-        padding: '20px', // Adiciona um pouco de preenchimento
         borderRadius: '10px', // Bordas arredondadas, se desejado
       }}
     >

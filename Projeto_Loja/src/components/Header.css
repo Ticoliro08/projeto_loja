@@ -2,7 +2,7 @@
 .headerBox {
     /* Flexbox Configurações */
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
     /* Tamanho */
@@ -27,7 +27,6 @@
     font-size: 4em;
     transition: all 1s ease;
     font-family: "Sriracha", cursive;
-    margin-left: 30%;
 }
 
 .headerBox h1:hover {

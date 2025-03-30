@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/NavBar"
 
 // imagens dos tenis
-import Img1 from '../assets/tenis/air_jordan_5.jpg'
+import Img1 from '../assets/oculos/Armação da Oakley.jfif'
 
 function Pagina1 () {
     return (
