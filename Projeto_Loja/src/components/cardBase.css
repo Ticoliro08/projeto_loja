@@ -6,6 +6,8 @@
     height: 75vh;
     justify-content: space-between;
     transition: all 0.5s ease;
+    margin-bottom: 3%;
+    border-radius: 10px;
 }
 
 .blocoCard:hover {
@@ -49,11 +51,23 @@ border-radius: 10px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    color: white;
-    width: 6vw;
-    padding: 0.5em;
+    color: rgb(236, 9, 9);
+    background-color: #F7F4F4;
+    font-size: 3vw;
+    padding: 1%;
     border-style: none;
-    border-radius: 0.3em;
+    cursor: pointer;
+}
+.botaoCarrinho {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: rgb(10, 10, 10);
+    background-color: #F7F4F4;
+    font-size: 3vw;
+    padding: 1%;
+    border-style: none;
     cursor: pointer;
 }
 
@@ -77,70 +91,3 @@ border-radius: 10px;
 
 /* --------------------------------------------------------------------- */
 
-/* From Uiverse.io by KSAplay */ 
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  .container {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 20px;
-    user-select: none;
-    transition: 100ms;
-  }
-  
-  .checkmark {
-    top: 0;
-    left: 0;
-    height: 2em;
-    width: 2em;
-    transition: 100ms;
-    animation: dislike_effect 400ms ease;
-  }
-  
-  .container input:checked ~ .checkmark path {
-    stroke-width: 0;
-  }
-  
-  .container input:checked ~ .checkmark {
-    animation: like_effect 400ms ease;
-  }
-  
-  .container:hover {
-    transform: scale(1.1);
-  }
-  
-  @keyframes like_effect {
-    0% {
-      transform: scale(0);
-    }
-  
-    50% {
-      transform: scale(1.2);
-    }
-  
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes dislike_effect {
-    0% {
-      transform: scale(0);
-    }
-  
-    50% {
-      transform: scale(1.2);
-    }
-  
-    100% {
-      transform: scale(1);
-    }
-  }
-  

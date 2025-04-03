@@ -19,51 +19,43 @@ function Pagina1 () {
         <section className="cards">
         <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 1"
+                    valor= {279.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 2"
+                    valor= {79.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 3"
+                    valor={89.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 4"
+                    valor= {60}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 5"
+                    valor= {99.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 6"
+                    valor= {129.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 7"
+                    valor= {149.90}
                 />
                 <Card
                 imagem={Img1}
-                    nomeProduto= "Air Jordan"
-                    descricao= "O Air Jordan 5 é um dos modelos mais icônicos da linha Air Jordan. O tênis foi lançado em 1990 e foi o primeiro modelo da linha a ter uma entressola de amortecimento de ar visível."
-                    valor= "R$ 399,90"
+                    nomeProduto= "oculos 8"
+                    valor= {199.90}
                 />
                
 

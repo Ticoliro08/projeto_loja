@@ -1,0 +1,27 @@
+/* BotaoTema.css */
+
+body{
+
+    .escuro {
+        filter: grayscale(100%);
+        background-color: black;
+    }
+    
+    .claro{
+    
+        filter: grayscale(100%);
+        background-color: white;
+        
+    }
+
+}
+
+.botaoCor{
+    padding: 1%;
+    background-color: rgb(11, 11, 11);
+    color: aliceblue;
+    border-radius: 50%;
+    margin-left: 5%;
+    font-size: 1.5vw;
+    cursor: pointer;
+}

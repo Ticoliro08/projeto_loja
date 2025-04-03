@@ -33,3 +33,32 @@
     transform: scale(1.1);
 }
 
+/* -------------------------------------------------- */
+.bx-menu{
+color: #f0f0f0;    
+font-size: 3vw;
+background-color: #3c3f41;
+border-style: none;}
+.menu {
+    background-color: #f0f0f0; /* Cor de fundo do menu */
+    padding: 3%; /* Preenchimento interno */
+    position: absolute; /* Para posicionar o menu */
+    top:100px; /* Ajuste conforme necessário */
+    right: 0; /* Alinhado à esquerda */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o menu */
+}
+
+.menu ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+.menu li {
+    margin: 10px 0; /* Margem entre os itens do menu */
+}
+
+.menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: black; /* Cor do texto */
+}
+

@@ -1,0 +1,47 @@
+.carrinho {
+    padding: 20px;
+    margin-bottom: 20%;
+  }
+
+  .vazio{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  
+  .carrinho h1 {
+    text-align: center;
+  }
+  .preco  {
+    margin-left: 5%;
+  }
+  
+  .carrinho ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .carrinho li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .carrinho img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .carrinho button {
+    margin-left: auto;
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carrinho button:hover {
+    background-color: #ff1a1a;
+  }

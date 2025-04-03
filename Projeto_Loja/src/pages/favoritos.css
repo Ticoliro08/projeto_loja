@@ -1,0 +1,28 @@
+.carrinhoContainer {
+    padding: 20px;
+    text-align: center;
+}
+
+.carrinhoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.carrinhoItem {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+}
+
+.carrinhoItem:hover {
+    transform: scale(1.05);
+}
+
+.carrinhoImagem {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
