@@ -23,7 +23,11 @@
 
 /* Título */
 .headerBox h1 {
-    color: #eff2f4;
+    a{
+        color: #eff2f4;
+        text-decoration: none;
+  
+    }
     font-size: 4em;
     transition: all 1s ease;
     font-family: "Sriracha", cursive;
@@ -32,13 +36,45 @@
 .headerBox h1:hover {
     transform: scale(1.1);
 }
+/* -------------------------------------------------- */
+/* From Uiverse.io by elijahgummer */ 
+.cadastro {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+    
+  }
+
+
+  .cadastro:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+  }
+  
 
 /* -------------------------------------------------- */
 .bx-menu{
 color: #f0f0f0;    
 font-size: 3vw;
 background-color: #3c3f41;
-border-style: none;}
+border-style: none;
+
+}
 .menu {
     background-color: #f0f0f0; /* Cor de fundo do menu */
     padding: 3%; /* Preenchimento interno */
@@ -46,6 +82,7 @@ border-style: none;}
     top:100px; /* Ajuste conforme necessário */
     right: 0; /* Alinhado à esquerda */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o menu */
+    
 }
 
 .menu ul {

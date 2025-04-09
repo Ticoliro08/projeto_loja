@@ -33,26 +33,25 @@ function Header() {
         <>
             <header className="headerBox">
                 <img className="logoHeader" src={logo} alt="Logo" />
-                <h1>Free Style</h1>
-                <button className="cadastro" > <Link to='/cadastro'> Cadastro</Link></button>
-
-                <button className="menuButton" onClick={toggleMenu}>
-                    {menuAberto ? <i class='bx bx-menu'></i> : <i class='bx bx-menu'></i>}
+                <h1><Link to='/'>Free Style</Link></h1>
+                <button className="cadastro"> 
+                 <Link style={{textDecoration:'none', color:'black'}} to='/cadastro'>Cadastrar</Link>
                 </button>
 
-                
+                <button className="menuButton" onClick={toggleMenu}>
+                    {menuAberto ? <i className='bx bx-menu'></i> : <i className='bx bx-menu'></i>}
+                </button>
             </header>
             
             {menuAberto && (
                 <nav className="menu">
-                      <button className="botaoCor" onClick={() => setTemaEscuro(!temaEscuro)}>
-                    {temaEscuro ? <i className='bx bxs-sun'></i> : <i className='bx bxs-moon'></i>}
-                </button>
+                    <button className="botaoCor" onClick={() => setTemaEscuro(!temaEscuro)}>
+                        {temaEscuro ? <i className='bx bxs-sun'></i> : <i className='bx bxs-moon'></i>}
+                    </button>
                     <ul>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/favoritos'>Favoritos</Link></li>
                         <li><Link to='/carrinho'>Carrinho</Link></li>
-                       
                     </ul>
                 </nav>
             )}
