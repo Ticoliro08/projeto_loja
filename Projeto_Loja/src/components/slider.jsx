@@ -3,7 +3,8 @@ import imagem1 from "../assets/slider/imagem1.jpg";
 import imagem2 from "../assets/slider/imagem2.jpg";
 import imagem3 from "../assets/slider/imagem3.jpg";
 
-import "../Components/slider.css";
+// Corrigido para o caminho correto
+import "../components/slider.css"; // Verifique a capitalização
 
 function SliderHome() {
   const imagens = [imagem1, imagem2, imagem3];
