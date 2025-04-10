@@ -99,3 +99,26 @@ border-style: none;
     color: black; /* Cor do texto */
 }
 
+/* Media Query para telas de até 480px */
+@media (max-width: 480px) {
+   
+
+    .headerBox h1 {
+        font-size: 150%; /* Reduz o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .bx-menu{
+        font-size: 8vw;
+        margin-right: 5%;
+    }
+
+    .cadastro{
+        font-size: 3vw;
+    }
+
+
+
+
+
+}

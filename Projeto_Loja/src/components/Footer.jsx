@@ -34,14 +34,7 @@ function Footer () {
 
             <section className="informacoes"> 
 
-                <section className="sobreNos"> 
-                    <p> <h4> Sobre a Empresa  </h4> A Free Style é mais do que uma loja de roupas—é um 
-                    conceito de liberdade e autenticidade na moda. Aqui, acreditamos que o estilo deve ser
-                     uma expressão da sua personalidade, sem regras ou limites.
-Nossa coleção combina tendências urbanas, conforto e atitude, oferecendo peças versáteis
- para quem quer se vestir com originalidade e confiança. Se você busca roupas que refletem 
- sua essência e acompanham seu ritmo, a Free Style é o seu destino.</p>
-                </section>
+               
 
                 <section className="listas"> 
                     <h4> Influenciadores e Criadores de Conteúdo</h4>
@@ -62,6 +55,15 @@ Nossa coleção combina tendências urbanas, conforto e atitude, oferecendo peç
 
                            <li>Shine & Style (marca de joias minimalistas)</li>
                         </ul>
+                </section>
+
+                <section className="sobreNos"> 
+                    <p> <h4> Sobre a Empresa  </h4> A Free Style é mais do que uma loja de roupas—é um 
+                    conceito de liberdade e autenticidade na moda. Aqui, acreditamos que o estilo deve ser
+                     uma expressão da sua personalidade, sem regras ou limites.
+Nossa coleção combina tendências urbanas, conforto e atitude, oferecendo peças versáteis
+ para quem quer se vestir com originalidade e confiança. Se você busca roupas que refletem 
+ sua essência e acompanham seu ritmo, a Free Style é o seu destino.</p>
                 </section>
 
               

@@ -55,6 +55,7 @@ function Card(props) {
 
   return (
     <>
+
       <section className="blocoCard">
         <section className="blocoTextos">
           <img className="imagemVia" src={props.imagem} alt={props.nomeProduto} />
@@ -70,6 +71,7 @@ function Card(props) {
         </section>
         <p className="valor"> R${props.valor}</p>
       </section>
+
     </>
   );
 }

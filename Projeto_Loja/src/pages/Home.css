@@ -53,3 +53,9 @@
     padding-bottom: 10em;
 }
 
+@media (max-width: 480px) {
+    .banner{
+        font-size: 2vw;
+    }
+    
+}

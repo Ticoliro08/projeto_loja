@@ -68,6 +68,7 @@
   transition: .4s ease-in-out;
   background-color: #252525;
   color: white;
+  margin-bottom: 10%;
 
   a{
     color: #eff2f4;
@@ -81,7 +82,7 @@
   color: white;
 }
 
-.button3 {
+/* .button3 {
   margin-bottom: 3em;
   padding: 0.5em;
   border-radius: 5px;
@@ -95,4 +96,14 @@
 .button3:hover {
   background-color: red;
   color: white;
+} */
+
+@media (max-width: 480px) {
+  .form {
+    width: 50%;
+  
+  }
+
+
+  
 }

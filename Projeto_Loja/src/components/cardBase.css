@@ -90,4 +90,27 @@ border-radius: 10px;
 
 
 /* --------------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .blocoCard{
+        width: 30%;
+        height: 55%;
+        padding: 1.5%;
+        
+
+    }
+
+    .blocoTextos{
+        font-size: 2.5vw;
+    }
+
+    .imagemVia{
+
+        width: 100%;
+        height: 60%;
+
+    }
+    
+
+}
 

@@ -1,28 +1,58 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-
 import './cadastro.css'; // Adicione seu CSS aqui
 import Header from '../components/Header';
 
 function SignIn() {
-  const [fullName, setFullName] = useState(''); // Novo estado para o nome completo
+  const [fullName, setFullName] = useState(''); // Estado para o nome completo
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [erros, setErros] = useState({ fullName: "", email: "", password: "" });
+
+  function validarfullName(nome) {
+    const regex = /^[a-zA-Z0-9]*$/; // Apenas letras e números
+    return regex.test(nome);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Armazenar as informações no localStorage
-    const userData = {
-      fullName, // Armazenando o nome completo
-      email,
-      password,
-    };
+    const novosErros = { fullName: "", email: "", password: "" };
 
-    localStorage.setItem('userData', JSON.stringify(userData));
+    // Validação do nome completo
+    if (fullName.length <= 3) {
+      novosErros.fullName = "O nome de usuário deve ter mais de 3 caracteres.";
+    } else if (!validarfullName(fullName)) {
+      novosErros.fullName = "Nome de usuário inválido! Use apenas letras e números.";
+    }
 
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário
-    console.log('User  data saved to localStorage:', userData);
+    // Validação do email
+    if (!email.includes("@")) {
+      novosErros.email = "Email inválido! O email deve conter '@'.";
+    }
+
+    // Validação da senha
+    if (password.length < 5) {
+      novosErros.password = "A senha deve ter pelo menos 5 caracteres.";
+    }
+
+    setErros(novosErros);
+
+    // Se não houver erros, prossegue
+    if (!novosErros.fullName && !novosErros.email && !novosErros.password) {
+      // Armazenar as informações no localStorage
+      const userData = {
+        fullName, // Armazenando o nome completo
+        email,
+        password,
+      };
+
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      // Navegar para a página principal após armazenar os dados
+      history.push('/'); // Redirecionar para a página principal
+      console.log('Dados do usuário salvos no localStorage:', userData);
+      alert(`Cadastro realizado! Usuário: ${fullName}, Email: ${email}`);
+    }
   };
 
   return (
@@ -32,9 +62,6 @@ function SignIn() {
         <form className="form" onSubmit={handleSubmit}>
           <p id="heading">Cadastro</p>
           <div className="field">
-            <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path ></path>
-            </svg>
             <input
               required
               autoComplete="off"
@@ -45,38 +72,37 @@ function SignIn() {
               onChange={(e) => setFullName(e.target.value)} // Atualiza o estado do nome completo
             />
           </div>
+          {erros.fullName && <p style={{ color: "red" }}>{erros.fullName}</p>}
+
           <div className="field">
-            <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z" ></path>
-            </svg>
             <input
               required
               autoComplete="off"
-              placeholder="Email" // Campo para o e-mail
+              placeholder="Email" // Campo para email
               className="input-field"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} // Atualiza o estado do e-mail
+              onChange={(e) => setEmail(e.target.value)} // Atualiza o estado do email
             />
           </div>
+          {erros.email && <p style={{ color: "red" }}>{erros.email}</p>}
+
           <div className="field">
-            <svg className="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
-            </svg>
             <input
               required
               autoComplete="off"
-              placeholder="Password" // Campo para a senha
+              placeholder="Password" // Campo para senha
               className="input-field"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)} // Atualiza o estado da senha
             />
           </div>
+          {erros.password && <p style={{ color: "red" }}>{erros.password}</p>}
+
           <div className="btn">
-            <button className="button1" type="submit"><Link to="/">Cadastrar</Link></button>
+            <button className="button1" type="submit">Cadastrar</button>
           </div>
-          <button className="button3">Forgot Password</button>
         </form>
       </center>
     </>

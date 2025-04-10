@@ -21,3 +21,11 @@
 #ativo {
     border-bottom: 0.1em solid #525354;
 }
+
+@media (max-width: 480px) {
+
+    .fonte{
+        font-size: 3vw;
+    }
+
+}
