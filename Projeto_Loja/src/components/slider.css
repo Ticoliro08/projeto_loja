@@ -1,38 +1,64 @@
 .meio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+  flex-direction: column; /* Alinha os itens em coluna em telas menores */
+}
 
-    transition: all 2s ease;
-  }
-  
+#slider {
+  position: relative;
+  width: 90%; /* Ajusta a largura para 90% em telas menores */
+  max-width: 800px; /* Define uma largura máxima */
+  height: 400px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  border: 4px solid transparent; /* Adiciona uma borda transparente */
+}
+
+.sliderBtn {
+  background-color: #0f1215;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffffaa;
+  border: none; /* Remove a borda padrão do botão */
+  padding: 10px 20px; /* Adiciona um padding para o botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.sliderBtn:hover {
+  background-color: #1a1d20; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
   #slider {
-    position: relative;
-    width: 70%;
-    height: 400px;
-    overflow: hidden;
+      height: 300px; /* Reduz a altura do slider em telas menores */
   }
-  
-  .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s;
-    border: 4px solid  ;
-  }
-  
-  .sliderBtn {
-   
-    background-color: #0f1215;
-    cursor: pointer;
-    font-size: 24px;
-    color:#ffffffaa;
-    
 
-   
+  .sliderBtn {
+      font-size: 20px; /* Reduz o tamanho da fonte do botão */
+      padding: 8px 16px; /* Ajusta o padding do botão */
   }
-  
- 
+}
+
+@media (max-width: 480px) {
+  #slider {
+      height: 200px; /* Reduz ainda mais a altura do slider em telas muito pequenas */
+  }
+
+  .sliderBtn {
+      font-size: 18px; /* Reduz o tamanho da fonte do botão */
+      padding: 6px 12px; /* Ajusta o padding do botão */
+  }
+}
