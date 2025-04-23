@@ -1,6 +1,9 @@
 .carrinhoContainer {
     padding: 20px;
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 20%;
+
 }
 
 .carrinhoGrid {

@@ -47,7 +47,7 @@ function SignIn() {
       };
 
       localStorage.setItem('userData', JSON.stringify(userData));
-
+      alert("Cadastro realizado com sucesso!");
       // Navegar para a página principal após armazenar os dados
       history.push('/'); // Redirecionar para a página principal
       console.log('Dados do usuário salvos no localStorage:', userData);

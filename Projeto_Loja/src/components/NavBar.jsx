@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
+
 function Navbar(props) {
   return (
     <nav className="blocoNav">
       <Link className="fonte" id="link" to="/"> <span id={props.home}>Home</span> </Link>
-
+      
       <Link className="fonte" id="link" to="/calcados"> <span id={props.pg1}>Calcados</span> </Link>
 
       <Link className="fonte" id="link" to="/camisas"> <span id={props.pg2}>Camisas</span> </Link>

@@ -101,7 +101,7 @@ border-style: none;
 }
 
 /* Media Query para telas de até 480px */
-@media (max-width: 480px) {
+@media (max-width: 760px)  {
    
 
     .headerBox h1 {
@@ -115,7 +115,7 @@ border-style: none;
     }
 
     .cadastro{
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
 

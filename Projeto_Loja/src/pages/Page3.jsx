@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/NavBar"
 
 // imagens dos tenis
-import Img1 from '../assets/oculos/Armação da Oakley.jfif'
+import Img1 from '../assets/oculos/Armação da Oakley.jpg'
 
 function Pagina1 () {
     return (

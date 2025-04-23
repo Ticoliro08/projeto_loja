@@ -15,39 +15,42 @@ function Card(props) {
   useEffect(() => {
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
   }, [favoritos, carrinho]);
 
   const adicionarAFavoritos = () => {
-    setFavoritos((prev) => {
-      const isFavorito = prev.some(favorito => favorito.nome === props.nomeProduto);
-      if (isFavorito) {
-        return prev.filter(favorito => favorito.nome !== props.nomeProduto);
-      } else {
-        return [...prev, { 
-          nome: props.nomeProduto,
-          imagem: props.imagem,
-          valor: props.valor // Armazena o valor do produto
-        }];
-      }
-    });
+    const isFavorito = favoritos.some(favorito => favorito.nome === props.nomeProduto);
+    if (isFavorito) {
+      // Remove do favoritos
+      const novosFavoritos = favoritos.filter(favorito => favorito.nome !== props.nomeProduto);
+      setFavoritos(novosFavoritos);
+    } else {
+      // Adiciona aos favoritos
+      const novoFavorito = { 
+        nome: props.nomeProduto,
+        imagem: props.imagem,
+        valor: props.valor // Armazena o valor do produto
+      };
+      setFavoritos([...favoritos, novoFavorito]);
+    }
   };
 
   const adicionarOuRemoverDoCarrinho = () => {
-    setCarrinho((prev) => {
-      const isNoCarrinho = prev.some(item => item.nome === props.nomeProduto);
-      if (isNoCarrinho) {
-        console.log(`Removendo ${props.nomeProduto} do carrinho`); // Log para depuração
-        return prev.filter(item => item.nome !== props.nomeProduto); // Remove do carrinho
-      } else {
-        console.log(`Adicionando ${props.nomeProduto} ao carrinho`); // Log para depuração
-        return [...prev, { 
-          nome: props.nomeProduto,
-          imagem: props.imagem,
-          valor: props.valor // Armazena o valor do produto
-        }];
-      }
-    });
+    const isNoCarrinho = carrinho.some(item => item.nome === props.nomeProduto);
+    if (isNoCarrinho) {
+      // Remove do carrinho
+      console.log(`Removendo ${props.nomeProduto} do carrinho`); // Log para depuração
+      const novosCarrinho = carrinho.filter(item => item.nome !== props.nomeProduto);
+      setCarrinho(novosCarrinho);
+    } else {
+      // Adiciona ao carrinho
+      console.log(`Adicionando ${props.nomeProduto} ao carrinho`); // Log para depuração
+      const novoItem = { 
+        nome: props.nomeProduto,
+        imagem: props.imagem,
+        valor: props.valor // Armazena o valor do produto
+      };
+      setCarrinho([...carrinho, novoItem]);
+    }
   };
 
   const isFavorito = favoritos.some(favorito => favorito.nome === props.nomeProduto);
@@ -55,7 +58,6 @@ function Card(props) {
 
   return (
     <>
-
       <section className="blocoCard">
         <section className="blocoTextos">
           <img className="imagemVia" src={props.imagem} alt={props.nomeProduto} />
@@ -66,12 +68,11 @@ function Card(props) {
             {isFavorito ? <i className='bx bxs-heart'></i> : <i className='bx bx-heart'></i>}
           </button>
           <button className="botaoCarrinho" onClick={adicionarOuRemoverDoCarrinho}>
-            {isNoCarrinho ?  <i class='bx bxs-cart' ></i> : <i class='bx bx-cart' ></i> }
+            {isNoCarrinho ? <i className='bx bxs-cart'></i> : <i className='bx bx-cart'></i>}
           </button>
         </section>
         <p className="valor"> R${props.valor}</p>
       </section>
-
     </>
   );
 }

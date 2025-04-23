@@ -25,7 +25,7 @@ function Home(){
                     Scrollamount: Define a velocidade da animação, baseado em pixels;
                     Scrolldelay: Define o tempo que o letreiro aparecerá novamente.
                 */}
-                <marquee  behavior="scroll" direction="left" scrollamount="12" scrolldelay="100">      
+                <marquee   behavior="scroll" direction="left" scrollamount="12" scrolldelay="100">      
                 <h1><span id="bandeira">Cupom <span id="azul">de</span> 10%<span id="azul"> na primeira compra</span></span></h1>
 
                 </marquee>
