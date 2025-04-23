@@ -24,14 +24,15 @@
 
 /* Título */
 .headerBox h1 {
+    font-size: 4em;
+    transition: all 1s ease;
+    font-family: "Sriracha", cursive;
     a{
         color: #eff2f4;
         text-decoration: none;
   
     }
-    font-size: 4em;
-    transition: all 1s ease;
-    font-family: "Sriracha", cursive;
+   
 }
 
 .headerBox h1:hover {
